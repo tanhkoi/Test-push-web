@@ -1,0 +1,357 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* begin: common */
+.clear {
+    clear: both;
+}
+.text-white {
+    color: white !important;
+}
+
+.pull-right {
+    float: right;
+}
+.mt-16 {
+    margin-top: 16px !important;
+}
+.btn {
+    line-height: 22px;
+    border: none;
+    color: white;
+    margin-bottom: 25px;
+    background-color: black;
+    display: inline-block;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+.btn:hover {
+    color: black;
+    background-color: #ccc;
+}
+.row {
+    margin: 0 -16px;
+}
+.row::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.col {
+    float: left;
+    padding: 0 8px;
+}
+.col-full {
+    width: 100%;
+}
+.col-half {
+    width: 50%;
+}
+.col-third {
+    width: 33.33333%;
+}
+/* end: common */
+/* main */
+#main {
+    font-size: 15px;
+}
+/* begin: header */
+#header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 2;
+    height: 46px;
+    background-color: black;
+    overflow: hidden;
+}
+#nav {
+    display: inline-block;
+}
+#nav >li >a {
+    color: white;
+    text-transform: uppercase;
+    line-height: 46px;
+    padding: 0px 24px;
+}
+#nav li a {
+    text-decoration: none;
+    display: inline-block;
+}
+#nav >li:hover >a,
+#nav .subnav li:hover a {
+    color: black;
+    background-color: #ccc;
+}
+#nav li {
+    position: relative;
+    display: inline-block;
+}
+#nav li:hover .subnav {
+    display: block;
+}
+#nav .subnav {
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    display: none;
+}
+#nav .subnav a{
+    color: black;
+    line-height: 38px;
+    width: 160px;
+    display: inline-block;
+    padding-left: 16px;
+}
+#header .arrow-down {
+    font-size: 12px;
+}
+#header .search-btn {
+    float: right;
+}
+#header .search-btn:hover {
+    background-color: red;
+    cursor: pointer;
+}
+#header .mobile-menu:hover {
+    background-color: #ccc;
+}
+#header .mobile-menu .menu-icon:hover {
+    color: black;
+}
+#header .search-icon {
+    font-size: 12px;
+    font-weight: bolder;
+    color: white;
+    line-height: 46px;
+    padding: 0 24px;
+}
+/* end: header */
+/* begin: slider */
+#slider {
+    margin-top: 46px;
+    padding-top: 50%;
+    background: url(/img/ny.jpg) top center / cover no-repeat;
+    position: relative;
+}
+#slider .slider-content {
+    position: absolute;
+    bottom: 0;
+    color: white;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    padding: 32px 16px;
+}
+#slider .slider-content-heading {
+    font-size: 24px;
+    line-height: 36px;
+    margin: 10px 0;
+    font-weight: 400;
+}
+#slider .slider-content-sub-heading {
+    font-weight: bolder;
+    margin: 15px 0;
+}
+/* end: slider */
+
+/* begin: content */
+/* common */
+#content .content-section {
+    padding: 64px 32px;
+    width: 800px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+#content .content-section-heading {
+    margin: 15px 0;
+    font-size: 30px;
+    line-height: 45px;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 4px;
+}
+#content .content-section-sub-heading {
+    text-align: center;
+    font-style: italic;
+    opacity: 0.6;
+    margin: 15px 0;
+    line-height: 22px;
+}
+/* end: common */
+
+/* the band */
+#content .theband-text {
+    text-align: justify;
+    line-height: 1.3;
+    margin: 15px 0;
+}
+#content .members-list {
+    text-align: center;
+    padding: 32px 0;
+}
+#content .member-name {
+    line-height: 22px;
+    margin: 15px 0;
+}
+#content .member-img {
+    width: 60%;
+    margin-bottom: 15px;
+    border-radius: 4px;
+}
+/* end the band */
+
+/* tour date */
+#content .tour-section {
+    background-color: black;
+}
+.tickets {
+    margin-top: 40px;
+    background-color: white;
+}
+.tickets li {
+    padding: 8px 16px;
+    border: 0.5px solid #ddd;
+    color: #757575;
+    list-style: none;
+    line-height: 22px;
+}
+.tickets .sold-out {
+    color: white;
+    background-color: #f44336;
+    padding: 0 8px;
+    margin-left: 16px;
+    line-height: 22px;
+    display: inline-block;
+}
+.tickets .quantity {
+    float: right;
+    color: white;
+    background-color: black;
+    border-radius: 50%;
+    padding: 0 8px;
+    margin-right: 16px;
+    display: block;
+    line-height: 22px;
+}
+.tickets-list {
+    padding: 32px 8px;
+}
+.tickets-list .ticket-place-img {
+    width: 100%;
+}
+.tickets-list .ticket-place-img:hover {
+    opacity: 0.7;
+}
+.tickets-list .ticket-info {
+    line-height: 22px;
+    padding: 0 16px;
+    background-color: white;
+    display: inline-block;
+    margin-bottom: 16px;
+}
+.tickets-list .ticket-heading {
+    margin: 15px 0;
+    font-weight: bolder;
+}
+.tickets-list .ticket-subhead {
+    margin: 15px 0;
+    opacity: 0.7;
+}
+.tickets-list .ticket-content {
+    margin: 15px 0;
+}
+/* end tour dates */
+
+/* contact */
+.contact-content {
+    padding: 32px 0;
+}
+.contact-info {
+    font-size: 18px;
+    line-height: 1.6;
+}
+.icon-info {
+    margin-right: 12px;
+}
+.contact-form {
+    font-size: 16px;
+}
+.form-control {
+    width: 100%;
+    line-height: 22px;
+    padding: 8px;
+    margin-bottom: 8px;
+    border: 1px solid #ccc;
+}
+/* end contact */
+/* end: content */
+
+/* begin: map */
+.map-section .map-img {
+    width: 100%;
+    filter: grayscale(50%);
+}
+/* end: map */
+
+/* begin: footer */
+#footer {
+    padding: 64px 16px;
+    font-size: 24px;
+    text-align: center;
+}
+.socials-list a{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.6);
+}
+.socials-icon:hover {
+    opacity: 0.6;
+}
+.footer-text, .footer-text a{
+    margin: 16px 0;
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.6);
+}
+/* end: footer */
+
+
+/* Break point */
+/* Mobile */
+@media (max-width: 740px) {
+    #nav li {
+        display: block;
+    }
+    #header .search-btn {
+        display: none;
+    }
+    #header .mobile-menu {
+        float: right;
+    }
+    #header .mobile-menu:hover {
+        background-color: #ccc;
+    }
+    #header .mobile-menu .menu-icon:hover {
+        color: black;
+    }
+    #header .mobile-menu .menu-icon {
+    font-size: 12px;
+    font-weight: bolder;
+    color: white;
+    line-height: 46px;
+    padding: 0 24px;
+    }
+}
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+    .mobile-menu {
+        display: none;
+    }
+}
